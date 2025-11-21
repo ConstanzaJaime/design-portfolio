@@ -1,0 +1,565 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Constanza Jaime - Soy una profesional en el área de diseño web enfocada en crear experiencias intuitivas, centradas en el usuario y basadas en datos. He tenido la oportunidad de diseñar para una audiencia global, donde destaco por mi capacidad de comunicación y colaboración. 
+      Creo firmemente que compartir objetivos claros dentro del equipo es la base para crear productos escalables y rentables para el negocio que atraigan a los usuarios.
+      Trabajo bajo el principio de mejora continua y estoy acostumbrado a aplicar diferentes metodologías para resolver problemas complejos en periodos cortos mejorando la experiencia de los usuarios, junto con los resultados de los clientes y equipos con los que trabajo."
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <title>Designer</title>
+  </head>
+  <body class="bg-gray-900 flex flex-col items-center">
+   <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="../dist/index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../assets/logo.png" alt="logo" class="h-8 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="../dist/index.html"
+            class="text-sm/6 font-semibold text-white"
+            >Home</a
+          >
+           <a
+            href="../dist/companies.html"
+            class="text-sm/6 font-semibold text-white"
+            >Compañias</a
+          >
+          <a
+            href="../dist/study-cases.html"
+            class="text-sm/6 font-semibold text-white"
+            >Casos de estudio</a
+          >
+          <a
+            href="../dist/about-me.html"
+            class="text-sm/6 font-semibold text-white"
+            >Sobre mi</a
+          >
+          <a
+            href="../dist/contact.html"
+            class="text-sm/6 font-semibold text-white"
+            >Contacto</a
+          >
+        </div>
+        <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm/6 font-semibold text-white"
+            >English <span aria-hidden="true">&rarr;</span></a
+          >
+        </div> -->
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img
+                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                    alt=""
+                    class="h-8 w-auto"
+                  />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../dist/index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Home</a
+                    >
+                    <a
+                      href="../dist/companies.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Compañias</a
+                    >
+                    <a
+                      href="../dist/study-cases.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Casos de estudio</a
+                    >
+                    <a
+                      href="../dist/about-me.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Sobre mi</a
+                    >
+                    <a
+                      href="../dist/contact.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Contacto</a
+                    >
+                  </div>
+                  <!-- <div class="py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >English</a
+                    >
+                  </div> -->
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <div class="w-auto max-w-7xl">
+      <img src="../assets/landing-img-talker.png" alt="">
+    </div>
+    <div class="px-6 py-8 lg:px-8">
+    <!--RESPONSIVE CHECKED- Talker study case page -->
+    <div class="flex flex-col w-full max-w-7xl text-xl text-gray-300">
+      <div class="my-6 w-auto max-w-7xl">
+        <h2
+          class="text-3xl font-semibold tracking-tight text-pretty text-white lg:text-5xl"
+        >
+          Sistema de diseño para plataforma de aprendizaje de idiomas
+        </h2>
+      </div>
+      <div class="w-auto max-w-2xl my-8">
+        <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+          Resumen del proyecto
+        </h3>
+        <div class="my-6">
+          <p>
+            Nuestro cliente era la mayor escuela de inglés y español de Brasil.
+            Basaban su aprendizaje en la práctica verbal del idioma, y cada año
+            de estudio tenía un volumen de guía de estudio correlacionado.
+          </p>
+          <br />
+          <p>
+            Además, ofrecían la práctica online de este contenido a través de la
+            plataforma online (aplicación web) y las alternativas nativas en
+            Android e iOS.
+          </p>
+        </div>
+      </div>
+      <span class="bg-indigo-500 h-0.5 w-full my-8 rounded-xl"></span>
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="flex flex-col items-start gap-4 shrink w-full lg:max-w-2xl">
+          <div class="my-8">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              El desafío
+            </h3>
+            <div class="my-6">
+              <p>
+                La escuela necesitaba ayuda con la experiencia online que
+                ofrecía a sus alumnos y profesores.
+              </p>
+              <br />
+              <p>
+                <strong>En el aula</strong>, los tutores tenían que enseñar
+                «trucos» para utilizarla o adaptar sus actividades debido a la
+                falta de disponibilidad de los servicios.
+              </p>
+              <br />
+              <p>
+                <strong>En sus escuelas</strong>, recibían llamadas constantes
+                informando de problemas con su uso, el envío o la recepción de
+                los deberes o las actividades asignadas.
+              </p>
+              <br />
+              <p>
+                Dado que ninguno de los principios heurísticos se aprobó para la
+                antigua plataforma, y la mayoría de los puntos débiles se debían
+                a la tecnología y los elementos visuales obsoletos, decidieron
+                invertir en la renovación de la plataforma online (aplicación
+                web) y las alternativas nativas en Android e iOS.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="../assets/Talker-mockup04.png"
+            alt="project image"
+            class="grow w-full lg:max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div>
+          <img
+            src="../assets/Talker-mockup05.png"
+            alt="project image"
+            class="grow w-full lg:max-w-2xl rounded-xl"
+          />
+        </div>
+        <div class="flex flex-col items-start gap-4 shrink w-full lg:max-w-2xl">
+          <div class="my-8">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Estado del problema
+            </h3>
+            <div class="my-6">
+              <p>
+                Omitiendo los puntos que se resolverían con las mejoras
+                propuestas y los ajustes visuales de los equipos de desarrollo,
+                quedaba por resolver la facilidad de navegación.
+              </p>
+              <br />
+              <p>
+                Aunque se suponía que la plataforma debía seguir el mismo
+                contenido que los libros de texto, los ejercicios de cada unidad
+                estaban todos juntos, lo que obligaba a los usuarios a
+                desplazarse por unas 150 tarjetas de ejercicios en una sola
+                página. Lo que a su vez ralentizaba la carga de la página.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="flex flex-col items-start gap-4 shrink w-full lg:max-w-2xl">
+          <div class="my-8">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Bases técnicas
+            </h3>
+            <div class="my-6">
+              <p>
+                Crear un sistema de diseño adaptado a los marcos utilizados para
+                las diferentes plataformas.
+              </p>
+              <br />
+              <p>
+                Dado que los equipos se constituyeron en un marco temporal
+                diferente, trabajamos en el siguiente orden:
+              </p>
+              <br />
+              <ul class="ml-6">
+                <li class="list-disc">
+                  <strong>Para la aplicación web adaptativa</strong>, se eligió
+                  el marco CSS «Bulma», que nos ayudó a establecer la
+                  nomenclatura utilizada en todo el sistema de diseño, tomando
+                  como base los componentes actuales disponibles en las
+                  bibliotecas y definiendo en paralelo el rango de píxeles
+                  utilizados para los espacios, los bordes, la tipografía, etc.
+                </li>
+                <br />
+                <li class="list-disc">
+                  <strong>Para Android</strong>, se utilizó una combinación con
+                  componentes nativos de «Material design» para entradas,
+                  selectores, navegación, etc.
+                </li>
+                <br />
+                <li class="list-disc">
+                  <strong>Para iOS</strong>, se utilizaron las «Directrices de
+                  interfaz humana» como base para los componentes nativos.
+                </li>
+              </ul>
+              <br />
+              <p>
+                Otra de nuestras preocupaciones era alinear el uso de iconos.
+                Decidimos utilizar FontAwesome, lo que permitió al equipo de
+                desarrollo exportar el icono directamente desde sus bibliotecas
+                en CSS, SVG o fuente. Aquí también tomamos prestadas las
+                nomenclaturas para que tuvieran una referencia para buscar el
+                icono correcto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="../assets/Talker-mockup06.png"
+            alt="project image"
+            class="grow w-full max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div>
+          <img
+            src="../assets/Talker-mockup03.png"
+            alt="project image"
+            class="grow w-full lg:max-w-2xl rounded-xl"
+          />
+        </div>
+        <div class="flex flex-col items-start gap-4 shrink w-full lg:max-w-2xl">
+          <div class="my-8">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Coordinación con el equipo de desarrollo
+            </h3>
+            <div class="my-6">
+              <p>
+                Dado que trabajamos con Figma en un momento en el que las
+                funciones disponibles no eran demasiado fáciles de usar para los
+                equipos de desarrollo, establecimos varias instancias con ellos
+                para comprender la herramienta.
+              </p>
+              <br />
+              <p>
+                Además, dentro de la documentación, creamos tablas para mostrar
+                cómo se reflejaba cada clase en los componentes y qué
+                significaba en cada equipo (web, Android, iOS).
+              </p>
+              <br />
+              <p>
+                En todos los casos mencionados, se crearon componentes
+                personalizados para elementos como ejercicios de aprendizaje,
+                tarjetas, etc. Cada uno de ellos lleva el nombre de una
+                alineación del equipo de diseño con el de desarrollo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Componentes personalizados
+          </h3>
+          <div class="my-6">
+            <p>
+              Una vez sentadas las bases utilizando los principios de atomic
+              design, comenzamos a crear los componentes personalizados.
+            </p>
+            <br />
+            <p>
+              Me centraré en los ejercicios, ya que eran el núcleo de la
+              plataforma y el principal punto de contacto con los usuarios
+              durante su proceso de aprendizaje.
+            </p>
+            <br />
+            <p>
+              Estos se basaban en los libros y en la antigua plataforma, por lo
+              que el primer paso fue descomponer los componentes existentes en
+              partes más pequeñas. Fue un proceso largo, ya que la plataforma
+              estaba obsoleta y los desarrolladores tuvieron que averiguar cómo
+              se enviaban los datos.
+            </p>
+            <br />
+            <p>
+              Aun así, con la información disponible y las reuniones con los
+              clientes, pudimos identificar la mayoría de ellos, lo que sirvió
+              de base para los componentes futuros.
+            </p>
+            <br />
+            <p>Clasificamos los ejercicios en tres grupos principales:</p>
+            <br />
+            <ul class="ml-6">
+              <li class="list-disc">
+                <strong>Texto</strong> (conferencias, botones, etc.)
+              </li>
+              <br />
+              <li class="list-disc">
+                <strong>Audiovisual</strong> (imágenes, gifs, vídeos y elementos
+                de voz)
+              </li>
+              <br />
+              <li class="list-disc">
+                <strong>Audio</strong> (reproductores de audio)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col items-start gap-4 shrink w-full max-w-2xl">
+          <div>
+            <img
+              src="../assets/Talker-mockup02.png"
+              alt="project image"
+              class="grow w-full max-w-2xl rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="w-auto max-w-7xl my-8">
+        <div class="my-6">
+          <p>
+            Una vez definidas las piezas principales de cada grupo, creamos
+            varias propuestas, combinándolas y probándolas en las diferentes
+            combinaciones disponibles y su apariencia en los dispositivos
+            requeridos.
+          </p>
+          <br />
+          <p>
+            Paralelamente, trabajando codo con codo con los equipos de
+            desarrollo, se creó el diseño y la documentación del estado y la
+            interacción de cada componente.
+          </p>
+          <br />
+          <p>
+            Nuestro segundo paso fue unir las piezas y crear los antiguos
+            ejercicios con los nuevos elementos visuales, teniendo cuidado de
+            agrupar y nombrar las clases según las existentes en los servicios
+            de datos.
+          </p>
+          <br />
+          <p>
+            Algunos de estos ejercicios tenían variaciones dentro de los tres
+            grupos mencionados anteriormente (texto, medios, audio).
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Creación de plantillas
+          </h3>
+          <div class="my-6">
+            <p>
+              Una vez creados los ejercicios y los componentes principales, solo
+              quedaba crear las pantallas.
+            </p>
+            <br />
+            <p>
+              Previamente habíamos definido los tamaños de pantalla, los
+              márgenes, los rellenos, los diseños y otros elementos, lo que nos
+              sirvió de guía para crear las plantillas de los ejercicios.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-4 shrink w-full max-w-7xl">
+          <div>
+            <img
+              src="../assets/Talker-mockup01.png"
+              alt="project image"
+              class="grow w-full max-w-7xl rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="w-auto max-w-2xl my-8">
+        <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+          Control de calidad
+        </h3>
+        <div class="my-6">
+          <p>
+            A medida que se creaban las pantallas y los equipos de desarrollo
+            las iban lanzando, realizamos sesiones de control de calidad en
+            dichas pantallas.
+          </p>
+          <br />
+          <p>
+            No solo para garantizar que cumplían con las directrices, sino
+            también para adaptar cualquier componente que no pudiera replicarse
+            con precisión dentro del marco.
+          </p>
+        </div>
+      </div>
+      <span class="bg-indigo-500 h-0.5 w-full my-8 rounded-xl"></span>
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Resultados y aprendizajes
+          </h3>
+          <div class="my-6">
+            <p>
+              Un paso crucial para la creación del sistema de diseño fue la
+              coordinación con los equipos de desarrollo, lo que no solo nos
+              ayudó a alcanzar definiciones rápidas y estandarizar, sino que
+              también les ayudó a avanzar rápidamente.
+            </p>
+            <br />
+            <p>
+              Más tarde, añadimos una experiencia de gamificación con juegos
+              basados en los mismos ejercicios y recompensas relacionadas con el
+              proceso de aprendizaje. ¿Qué tal si nos ponemos en contacto y te
+              contamos más?
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center gap-4 shrink w-full lg:max-w-2xl"
+        >
+          <div>
+            <img
+              src="../assets/Talker-presentation.png"
+              alt="project image"
+              class="grow w-full lg:max-w-2xl rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

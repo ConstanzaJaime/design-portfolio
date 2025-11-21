@@ -1,0 +1,682 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Constanza Jaime - Soy una profesional en el área de diseño web enfocada en crear experiencias intuitivas, centradas en el usuario y basadas en datos. He tenido la oportunidad de diseñar para una audiencia global, donde destaco por mi capacidad de comunicación y colaboración. 
+      Creo firmemente que compartir objetivos claros dentro del equipo es la base para crear productos escalables y rentables para el negocio que atraigan a los usuarios.
+      Trabajo bajo el principio de mejora continua y estoy acostumbrado a aplicar diferentes metodologías para resolver problemas complejos en periodos cortos mejorando la experiencia de los usuarios, junto con los resultados de los clientes y equipos con los que trabajo."
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <title>Designer</title>
+  </head>
+  <body class="bg-gray-900 flex flex-col items-center">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="../dist/index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../assets/logo.png" alt="logo" class="h-8 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="../dist/index.html"
+            class="text-sm/6 font-semibold text-white"
+            >Home</a
+          >
+           <a
+            href="../dist/companies.html"
+            class="text-sm/6 font-semibold text-white"
+            >Compañias</a
+          >
+          <a
+            href="../dist/study-cases.html"
+            class="text-sm/6 font-semibold text-white"
+            >Casos de estudio</a
+          >
+          <a
+            href="../dist/about-me.html"
+            class="text-sm/6 font-semibold text-white"
+            >Sobre mi</a
+          >
+          <a
+            href="../dist/contact.html"
+            class="text-sm/6 font-semibold text-white"
+            >Contacto</a
+          >
+        </div>
+        <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm/6 font-semibold text-white"
+            >English <span aria-hidden="true">&rarr;</span></a
+          >
+        </div> -->
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img
+                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                    alt=""
+                    class="h-8 w-auto"
+                  />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../dist/index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Home</a
+                    >
+                    <a
+                      href="../dist/companies.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Compañias</a
+                    >
+                    <a
+                      href="../dist/study-cases.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Casos de estudio</a
+                    >
+                    <a
+                      href="../dist/about-me.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Sobre mi</a
+                    >
+                    <a
+                      href="../dist/contact.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Contacto</a
+                    >
+                  </div>
+                  <!-- <div class="py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >English</a
+                    >
+                  </div> -->
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <!-- Heading section -->
+    <div
+      class="flex flex-col lg:flex-row justify-center gap-16 mt-8 px-6 py-20 md:py-28 items-center lg:max-w-7xl"
+    >
+      <!-- Text -->
+      <div class="flex flex-col w-full xl:max-w-xl">
+        <h1
+          class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-7xl"
+        >
+          Constanza Jaime
+        </h1>
+        <h2 class="mt-2 text-xl font-semibold text-indigo-300">
+          Diseñadora de Productos Digitales.
+        </h2>
+        <p
+          class="mt-8 font-medium text-pretty text-gray-400 text-lg sm:text-xl/8"
+        >
+          Conecto la visión de negocio con la experiencia humana.
+        </p>
+        <div class="mt-10 flex items-center gap-x-6">
+          <a
+            href="../dist/contact.html"
+            class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >Contáctame</a
+          >
+        </div>
+      </div>
+      <!-- Video -->
+      <iframe
+        class="aspect-video w-full lg:max-w-xl xl:max-w-3xl rounded-3xl"
+        src="https://www.youtube.com/embed/goqqohUitmw?si=DRVID3YiTd6AqS5J"
+        aria-placeholder="YouTube video"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <!-- About me -->
+    <div
+      class="flex flex-col items-center px-12 py-6 md:py-12 w-full bg-gray-800"
+    >
+      <div class="flex flex-col justify-left gap-10 my-4 lg:max-w-7xl">
+        <div
+          class="text-base/7 flex flex-col items-start gap-4 shrink w-full max-w-2xl"
+        >
+          <h3 class="text-2xl font-semibold text-white">Sobre mi</h3>
+          <p class="mt-6 text-lg/7 text-gray-300">
+            Soy un diseñadora que ha tenido la oportunidad de crear y mejorar
+            productos para una audiencia global colaborando con una amplia
+            variedad de perfiles en la creación de sitios web adaptativos y
+            aplicaciones móviles.
+          </p>
+
+          <a
+            href="../dist/about-me.html"
+            class="text-lg sm:text-xl/8 text-indigo-500 hover:text-indigo-700"
+            >Leer más...</a
+          >
+        </div>
+        <!--<div>
+          <img
+            src="../assets/placeholder-image.png"
+            alt="project image"
+            class="grow w-full max-w-28 rounded-xl"
+          />
+        </div> -->
+      </div>
+    </div>
+
+    <!--"Software I've worked with" section-->
+    <div class="flex justify-center items-center px-6 w-full xl:max-w-7xl">
+      <div class="md:max-w-xl py-12 md:py-20">
+        <h2
+          class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl"
+        >
+          Software
+        </h2>
+        <ul
+          class="columns-1 lg:columns-2 w-xl pl-6 my-8 md:my-24 text-2xl/loose text-gray-300"
+        >
+          <li class="list-disc ml-4">Figma</li>
+          <li class="list-disc ml-4">Jira</li>
+          <li class="list-disc ml-4">Useberry</li>
+          <li class="list-disc ml-4">Hotjar</li>
+          <li class="list-disc ml-4">Miro</li>
+          <li class="list-disc ml-4">Webflow</li>
+          <li class="list-disc ml-4">HTML5</li>
+          <li class="list-disc ml-4">CSS</li>
+          <li class="list-disc ml-4">Notion</li>
+          <li class="list-disc ml-4">Illustrator</li>
+        </ul>
+      </div>
+      <div class="area w-96 h-svh lg:w-2/3 md:h-full rounded-2xl">
+        <div class="circles">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <!--RESPONSIVE CHECKED -Design steps section-->
+    <div
+      class="flex flex-col py-24 sm:py-32 mx-auto max-w-7xl px-12 lg:px-14 gap-y-16 justify-center items-center"
+    >
+      <div class="flex w-full lg:justify-center items-center">
+        <span
+          class="bg-indigo-500 lg:h-0.5 lg:w-full lg:mr-2 rounded-xl"
+        ></span>
+        <h2
+          class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white lg:text-5xl lg:whitespace-nowrap"
+        >
+          Proceso de trabajo
+        </h2>
+        <span
+          class="bg-indigo-500 lg:h-0.5 lg:w-full lg:ml-2 rounded-xl"
+        ></span>
+      </div>
+      <p class="mt-6 text-lg/8 text-gray-300">
+        Tomo decisiones basadas en datos y en colaboración con equipos
+        multidisciplinarios. Trabajo en un entorno Ágil/ Scrum con metodologías
+        como el Design Thinking o el doble diamante, utilizando herramientas
+        como Jira y Notion para asegurar una comunicación fluida y una entrega
+        eficiente del producto. Además de tener una gran gestión de tiempo y
+        priorización de tareas.
+      </p>
+      <!-- 1/4 -->
+      <div class="w-auto max-w-7xl">
+        <span class="text-base/7 font-semibold text-indigo-400">1/4</span>
+        <h3
+          class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-white lg:text-4xl lg:text-balance"
+        >
+          Investigación y estrategia
+        </h3>
+        <p class="mt-6 text-lg/8 text-gray-300">
+          Utilizo investigación y análisis de datos cualitativos y cuantitativos
+          para identificar no sólo los puntos débiles, sino las oportunidades de
+          mercado me permite tomar decisiones estratégicas que impactan
+          directamente en el negocio.
+        </p>
+      </div>
+      <div class="max-w-7xl">
+        <img
+          class="w-fit ml-4"
+          src="/assets/research.png"
+          alt="placeholder"
+          onerror="this.onerror=null; this.src='/assets/placeholder-image.png'"
+        />
+      </div>
+      <div
+        class="flex flex-col lg:flex-row w-full max-w-7xl gap-4 lg:gap-10 p-4 lg:p-8 m-4 lg:mx-16 bg-gray-800 after:inset-ring-white/10 rounded-3xl"
+      >
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl font-semibold text-white">Actividades clave</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 px-4">
+            <li class="list-disc">UX Research (Investigación de usuarios)</li>
+            <li class="list-disc">
+              Utilizar y recopilar datos cuantitativos y cualitativos mediante
+              diferentes métodos y herramientas.
+            </li>
+            <li class="list-disc">
+              Realizar pruebas de usabilidad y análisis de la experiencia del
+              usuario.
+            </li>
+            <li class="list-disc">
+              Cualitativos: análisis de datos, A/B testing, evaluación
+              heurística, etc.
+            </li>
+          </ul>
+        </div>
+        <span
+          class="bg-indigo-500 h-0.5 w-auto lg:h-auto lg:w-0.5 rounded-xl mx-6 my-4"
+        ></span>
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl">¿Cómo los vuelvo un impacto en el negocio?</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 pl-4">
+            <li class="list-disc">Alineación con KPIs y OKRs del negocio</li>
+            <li class="list-disc">
+              Optimización de recursos: planificación y presupuesto para test,
+              evaluaciones y entrevistas.
+            </li>
+            <li class="list-disc">
+              Revisión de analíticas disponibles: Analytics, Hotjar, informes de
+              customer support, etc.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 2/4 -->
+      <div class="w-auto max-w-7xl">
+        <span class="text-base/7 font-semibold text-indigo-400">2/4</span>
+        <h3
+          class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-white lg:text-4xl lg:text-balance"
+        >
+          Definición estratégica y estructura del sitio
+        </h3>
+        <p class="mt-6 text-lg/8 text-gray-300">
+          En esta etapa priorizo junto con los equipos involucrados las tareas o
+          flujos que se realizarán de acuerdo a los descubrimientos de
+          investigación y el orden en que se deben abordar. Además del organizar
+          la jerarquía e información del sitio o app.
+        </p>
+      </div>
+      <div class="max-w-7xl">
+        <img
+          class="w-fit ml-4"
+          src="/assets/smart-homy-tools 1.png"
+          alt="placeholder"
+          onerror="this.onerror=null; this.src='/assets/placeholder-image.png'"
+        />
+      </div>
+      <div
+        class="flex flex-col lg:flex-row w-full max-w-7xl gap-4 lg:gap-10 p-4 lg:p-8 m-4 lg:mx-16 bg-gray-800 after:inset-ring-white/10 rounded-3xl"
+      >
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl font-semibold text-white">Actividades clave</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 px-4">
+            <li class="list-disc">
+              Priorización de tareas (ej. matriz esfuerzo/ impacto)
+            </li>
+            <li class="list-disc">Sitemap o mapas de navegación</li>
+            <li class="list-disc">Userflow o flujos de usuario</li>
+            <li class="list-disc">Customer Journey map</li>
+            <li class="list-disc">Service Blueprint</li>
+          </ul>
+        </div>
+        <span
+          class="bg-indigo-500 h-0.5 w-auto lg:h-auto lg:w-0.5 rounded-xl mx-6 my-4"
+        ></span>
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl">¿Cómo los vuelvo un impacto en el negocio?</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 pl-4">
+            <li class="list-disc">
+              Definición de los touch points claves para generar conversión.
+            </li>
+            <li class="list-disc">
+              Definición de entregables como MVP, cada entrega debe aportar
+              valor por si misma.
+            </li>
+            <li class="list-disc">
+              Coordinación continua con equipos involucrados para garantizar
+              viabilidad técnicas, comerciales y legales de los flujos.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 3/4 -->
+      <div class="w-auto max-w-7xl">
+        <span class="text-base/7 font-semibold text-indigo-400">3/4</span>
+        <h3
+          class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-white lg:text-4xl lg:text-balance"
+        >
+          Diseño de Soluciones escalables
+        </h3>
+        <p class="mt-6 text-lg/8 text-gray-300">
+          Creo soluciones visuales y de contenido, las que documento para
+          garantizar que los productos sean visualmente consistentes, además de
+          ser eficientes de construir en diferentes dispositivos y mantener a
+          largo plazo tanto en web responsive como apps nativas.
+        </p>
+      </div>
+      <div class="max-w-7xl">
+        <img
+          class="w-fit ml-4"
+          src="/assets/talker.png"
+          alt="placeholder"
+          onerror="this.onerror=null; this.src='/assets/placeholder-image.png'"
+        />
+      </div>
+      <div
+        class="flex flex-col lg:flex-row w-full max-w-7xl gap-4 lg:gap-10 p-4 lg:p-8 m-4 lg:mx-16 bg-gray-800 after:inset-ring-white/10 rounded-3xl"
+      >
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl font-semibold text-white">Actividades clave</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 px-4">
+            <li class="list-disc">Wireframing</li>
+            <li class="list-disc">Etiquetado HTML y Accesibilidad (WCAG)</li>
+            <li class="list-disc">Diseño visual</li>
+            <li class="list-disc">
+              Guías de estilo y Sistemas de diseño alineados a framework o
+              clases CSS
+            </li>
+            <li class="list-disc">Prototipado e interacciones</li>
+            <li class="list-disc">Branding</li>
+            <li class="list-disc">Documentación de diseño</li>
+          </ul>
+        </div>
+        <span
+          class="bg-indigo-500 h-0.5 w-auto lg:h-auto lg:w-0.5 rounded-xl mx-6 my-4"
+        ></span>
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl">¿Cómo los vuelvo un impacto en el negocio?</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 pl-4">
+            <li class="list-disc">
+              Alineación con bases de datos, servicios de pago y otros recursos
+              de desarrollo disponibles, agilizando ciclos de entrega y
+              reducción de costos a largo plazo.
+            </li>
+            <li class="list-disc">
+              Coordinación con equipos de marketing para incorporar display ads
+              o contenido SEO/ SEM dentro del sitio.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 4/4 -->
+      <div class="w-auto max-w-7xl">
+        <span class="text-base/7 font-semibold text-indigo-400">4/4</span>
+        <h3
+          class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-white lg:text-4xl lg:text-balance"
+        >
+          Validación con Usuarios
+        </h3>
+        <p class="mt-6 text-lg/8 text-gray-300">
+          Utilizo plataformas como Useberry para pruebas de usabilidad y Google
+          Analytics para monitorear productos que se encuentran en producción y
+          así tomar decisiones basadas en datos reales para decidir si iterar o
+          mantener las propuestas.
+        </p>
+      </div>
+      <div class="max-w-7xl">
+        <img
+          class="w-fit ml-4"
+          src="/assets/testing.png"
+          alt="placeholder"
+          onerror="this.onerror=null; this.src='/assets/placeholder-image.png'"
+        />
+      </div>
+      <div
+        class="flex flex-col lg:flex-row w-full max-w-7xl gap-4 lg:gap-10 p-4 lg:p-8 m-4 lg:mx-16 bg-gray-800 after:inset-ring-white/10 rounded-3xl"
+      >
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl font-semibold text-white">Actividades clave</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 px-4">
+            <li class="list-disc">
+              Test de usuario ( 5 segundos, guerrilla, think aloud, a/b testing,
+              etc.)
+            </li>
+            <li class="list-disc">
+              Evaluación del testeo (CES, CSAT, tiempo de tarea, tasa de
+              finalización de flujo)
+            </li>
+            <li class="list-disc">
+              Evaluación de implementación (NPS, CSAT, Conversion-rate,
+              Bounce-rate)
+            </li>
+            <li class="list-disc">Iteración y reevaluación</li>
+          </ul>
+        </div>
+        <span
+          class="bg-indigo-500 h-0.5 w-auto lg:h-auto lg:w-0.5 rounded-xl mx-6 my-4"
+        ></span>
+        <div class="flex-1 flex flex-col gap-4 mx-6 my-4">
+          <div
+            class="flex items-start gap-4 text-base/7 font-semibold text-white"
+          >
+            <h3 class="text-2xl">¿Cómo los vuelvo un impacto en el negocio?</h3>
+          </div>
+          <ul class="mt-2 text-base/7 text-gray-400 pl-4">
+            <li class="list-disc">
+              Toda validación de usuario cualitativa se complementa con alguna
+              métrica de evaluación.
+            </li>
+            <li class="list-disc">
+              Las métricas de usabilidad están asociadas al menos a un OKR o KPI
+              de la empresa.
+            </li>
+            <li class="list-disc">
+              Monitoreo de los resultados y Quality Assurance (QA) para asegurar
+              implementación en producción.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact section -->
+    <div
+      id="contact"
+      class="flex flex-col items-left px-12 py-6 mt-16 w-full bg-gray-800"
+    >
+      <div
+        class="flex flex-col lg:flex-row justify-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div
+          class="text-base/7 flex flex-col items-start gap-2 shrink w-full max-w-2xl"
+        >
+          <h3 class="text-2xl font-semibold text-white mb-4">Contacto</h3>
+          <p class="text-lg/7 text-gray-300">constanza.jaime.a@gmail.com</p>
+          <p class="text-lg/7 text-gray-300">+56931752751</p>
+          <a
+            class="text-lg sm:text-xl/8 text-indigo-500 hover:text-indigo-700"
+            href="https://www.linkedin.com/in/constanzajaime/"
+            >LinkedIn</a
+          >
+        </div>
+        <!-- <div>
+          <img
+            src="../assets/placeholder-image.png"
+            alt="project image"
+            class="grow w-full max-w-28 rounded-xl"
+          />
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Project card -->
+    <!-- <div class="flex flex-col items-center p-6 my-8">
+      <div class="flex items-start gap-4 w-full md:max-w-2xl lg:max-w-7xl mb-4">
+        <span
+          class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+          >Proyecto</span
+        >
+      </div>
+      <div
+        class="flex flex-col lg:flex-row justify-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div
+          class="text-base/7 flex flex-col items-start gap-4 shrink w-full max-w-2xl"
+        >
+          <h3 class="text-2xl font-semibold text-white">Título del proyecto</h3>
+          <p class="mt-2 text-lg sm:text-xl/8 text-gray-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ullam
+            quisquam repellendus facilis, voluptate reprehenderit laboriosam
+            numquam eveniet laudantium obcaecati? Nemo assumenda eos ad,
+            aspernatur perspiciatis saepe atque molestias corporis.
+          </p>
+          <a
+            href="../replace-link"
+            class="text-lg sm:text-xl/8 text-indigo-500 hover:text-indigo-700"
+            >Link al proyecto</a
+          >
+        </div>
+        <div>
+          <img
+            src="../assets/placeholder-image.png"
+            alt="project image"
+            class="grow w-full max-w-2xl rounded-xl"
+          />
+          <div
+            class="flex flex-wrap not-[]:items-start gap-3 w-full md:max-w-2xl lg:max-w-7xl mt-4"
+          >
+            <span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >B2B</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >SaaS</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >E-Learning</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >Design System</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >iOS</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >Android</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >Responsive web</span
+            ><span
+              class="inline-flex items-center rounded-3xl bg-indigo-500/50 px-2.5 py-1 text-l font-medium text-gray-200"
+              >Languages</span
+            >
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>

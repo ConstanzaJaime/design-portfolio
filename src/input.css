@@ -1,0 +1,189 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+
+/* Konna: Link de refrencia de la animación https://tailwindflex.com/@anonymous/background-animation */
+
+/*Start Animations*/
+@-webkit-keyframes animatetop {
+  from {
+    top: -200px;
+    /* opacity: 1; */
+  }
+  to {
+    top: 0;
+    /* opacity: 0; */
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -200px;
+    /* opacity: 1; */
+  }
+  to {
+    top: 0;
+    /* opacity: 0; */
+  }
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    /* opacity: 1; */
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  /* 50% {
+    opacity: 0;
+  } */
+}
+@keyframes zoomIn {
+  0% {
+    /* opacity: 1; */
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  /* 50% {
+    opacity: 0;
+  } */
+}
+/*End Animations*/
+/*
+-- Start BackGround Animation 
+*/
+/* Konna: area sirve para definir tamaño y forma del background */
+.area {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96%;
+  overflow: hidden;
+}
+
+.circles span {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles span:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 25%;
+  animation-delay: 0s;
+  background-image: url("../assets/tools-jira.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(2) {
+  width: 70px;
+  height: 70px;
+  left: 10%;
+  animation-delay: 2s;
+  animation-duration: 12s;
+  background-image: url("../assets/tools-notion.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(3) {
+  width: 75px;
+  height: 75px;
+  left: 60%;
+  animation-delay: 8s;
+  background-image: url("../assets/tools-miro.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  left: 40%;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  background-image: url("../assets/tools-webflow.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(5) {
+  width: 75px;
+  height: 75px;
+  left: 55%;
+  animation-delay: 0s;
+  background-image: url("../assets/tools-useberry.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(6) {
+  width: 110px;
+  height: 110px;
+  left: 75%;
+  animation-delay: 3s;
+  background-image: url("../assets/tools-illustrator.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(7) {
+  width: 150px;
+  height: 150px;
+  left: 35%;
+  animation-delay: 7s;
+  background-image: url("../assets/tools-figma.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(8) {
+  width: 75px;
+  height: 75px;
+  left: 50%;
+  animation-delay: 15s;
+  animation-duration: 45s;
+  background-image: url("../assets/tools-hotjar.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(9) {
+  width: 75px;
+  height: 75px;
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 35s;
+  background-image: url("../assets/tools-html.jpg");
+  background-size: cover;
+}
+
+.circles span:nth-child(10) {
+  width: 150px;
+  height: 150px;
+  left: 85%;
+  animation-delay: 0s;
+  animation-duration: 11s;
+  background-image: url("../assets/tools-css.jpg");
+  background-size: cover;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) 
+    /* rotate(720deg) */
+    ;
+    opacity: 10;
+    border-radius: 50%;
+  }
+}
+/*
+-- End BackGround Animation 
+*/

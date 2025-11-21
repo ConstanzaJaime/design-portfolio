@@ -1,0 +1,287 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Constanza Jaime - Soy una profesional en el área de diseño web enfocada en crear experiencias intuitivas, centradas en el usuario y basadas en datos. He tenido la oportunidad de diseñar para una audiencia global, donde destaco por mi capacidad de comunicación y colaboración. 
+      Creo firmemente que compartir objetivos claros dentro del equipo es la base para crear productos escalables y rentables para el negocio que atraigan a los usuarios.
+      Trabajo bajo el principio de mejora continua y estoy acostumbrado a aplicar diferentes metodologías para resolver problemas complejos en periodos cortos mejorando la experiencia de los usuarios, junto con los resultados de los clientes y equipos con los que trabajo."
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <title>Designer</title>
+  </head>
+  <body class="bg-gray-900 flex flex-col items-center px-6 py-48 lg:px-8">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="../dist/index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../assets/logo.png" alt="logo" class="h-8 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="../dist/index.html"
+            class="text-sm/6 font-semibold text-white"
+            >Home</a
+          >
+           <a
+            href="../dist/companies.html"
+            class="text-sm/6 font-semibold text-white"
+            >Compañias</a
+          >
+          <a
+            href="../dist/study-cases.html"
+            class="text-sm/6 font-semibold text-white"
+            >Casos de estudio</a
+          >
+          <a
+            href="../dist/about-me.html"
+            class="text-sm/6 font-semibold text-white"
+            >Sobre mi</a
+          >
+          <a
+            href="../dist/contact.html"
+            class="text-sm/6 font-semibold text-white"
+            >Contacto</a
+          >
+        </div>
+        <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm/6 font-semibold text-white"
+            >English <span aria-hidden="true">&rarr;</span></a
+          >
+        </div> -->
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img
+                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                    alt=""
+                    class="h-8 w-auto"
+                  />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../dist/index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Home</a
+                    >
+                    <a
+                      href="../dist/companies.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Compañias</a
+                    >
+                    <a
+                      href="../dist/study-cases.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Casos de estudio</a
+                    >
+                    <a
+                      href="../dist/about-me.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Sobre mi</a
+                    >
+                    <a
+                      href="../dist/contact.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Contacto</a
+                    >
+                  </div>
+                  <!-- <div class="py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >English</a
+                    >
+                  </div> -->
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <!--RESPONSIVE CHECKED -Companies page -->
+    <div class="w-auto max-w-7xl">
+      <h2
+        class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-white lg:text-5xl lg:text-balance"
+      >
+        Compañias y proyectos independientes
+      </h2>
+      <p class="mt-6 text-lg/8 text-gray-300">
+        La mayoría de los clientes y compañías para las que he trabajado operan
+        con contratos de confidencialidad sobre información sensible, por lo que
+        te comparto solamente una descripción general de los proyectos en los
+        que he trabajado.
+      </p>
+    </div>
+    <!-- Moonshot partners -->
+    <div class="flex flex-col items-center p-6 my-8">
+      <div
+        class="flex flex-col lg:flex-row justify-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div
+          class="text-base/7 flex flex-col items-start gap-4 shrink w-full max-w-2xl"
+        >
+          <h3 class="text-2xl font-semibold text-white">Moonshot partners</h3>
+          <p class="mt-2 text-lg sm:text-xl/8 text-gray-400">
+            Trabajé allí durante dos años en la startup con sede en el Reino
+            Unido. Participé en proyectos en diferentes áreas y empresas de todo
+            el mundo, pero principalmente en el ámbito del aprendizaje
+            electrónico para los clientes Pearson y Wizard (de Pearson).
+          </p>
+          <a
+            href="../dist/company-moonshot.html"
+            class="text-lg sm:text-xl/8 text-indigo-500 hover:text-indigo-700"
+            >Resumen de proyectos</a
+          >
+        </div>
+        <div>
+          <img
+            src="../assets/company=moonshot, project=default.png"
+            alt="project image"
+            class="grow w-full max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Falabella Financiero -->
+    <div class="flex flex-col items-center p-6 my-8">
+      <div
+        class="flex flex-col lg:flex-row justify-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div
+          class="text-base/7 flex flex-col items-start gap-4 shrink w-full max-w-2xl"
+        >
+          <h3 class="text-2xl font-semibold text-white">
+            Falabella Financiero
+          </h3>
+          <p class="mt-2 text-lg sm:text-xl/8 text-gray-400">
+            Trabajé durante un año para la corredora de seguros de Latam,
+            centrándome principalmente en propuestas regionales para la
+            comparación, contratación y flujos de pago de una amplia gama de
+            productos (vehículos, salud, vida, viajes, entre otros).
+          </p>
+          <a
+            href="../dist/company-falabella.html"
+            class="text-lg sm:text-xl/8 text-indigo-500 hover:text-indigo-700"
+            >Resumen de proyectos</a
+          >
+        </div>
+        <div>
+          <img
+            src="../assets/company=sf, project=default.png"
+            alt="project image"
+            class="grow w-full max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Pasantía -->
+    <div class="flex flex-col items-center p-6 my-8">
+      <div
+        class="flex flex-col lg:flex-row justify-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div
+          class="text-base/7 flex flex-col items-start gap-4 shrink w-full max-w-2xl"
+        >
+          <h3 class="text-2xl font-semibold text-white">Proyectos pasantía</h3>
+          <p class="mt-2 text-lg sm:text-xl/8 text-gray-400">
+            En mis inicios como diseñador de UX UI, creé diferentes propuestas
+            rápidas para una variedad de clientes, tales como empresas de
+            automatización del hogar, ONG y empresas de selección de personal.
+          </p>
+          <a
+            href="../dist/company-internship.html"
+            class="text-lg sm:text-xl/8 text-indigo-500 hover:text-indigo-700"
+            >Resumen de proyectos</a
+          >
+        </div>
+        <div>
+          <img
+            src="../assets/company=op, project=default.png"
+            alt="project image"
+            class="grow w-full max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,373 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Constanza Jaime - Soy una profesional en el área de diseño web enfocada en crear experiencias intuitivas, centradas en el usuario y basadas en datos. He tenido la oportunidad de diseñar para una audiencia global, donde destaco por mi capacidad de comunicación y colaboración. 
+      Creo firmemente que compartir objetivos claros dentro del equipo es la base para crear productos escalables y rentables para el negocio que atraigan a los usuarios.
+      Trabajo bajo el principio de mejora continua y estoy acostumbrado a aplicar diferentes metodologías para resolver problemas complejos en periodos cortos mejorando la experiencia de los usuarios, junto con los resultados de los clientes y equipos con los que trabajo."
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <title>Designer</title>
+  </head>
+  <body class="bg-gray-900 flex flex-col items-center">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="../dist/index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../assets/logo.png" alt="logo" class="h-8 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="../dist/index.html"
+            class="text-sm/6 font-semibold text-white"
+            >Home</a
+          >
+           <a
+            href="../dist/companies.html"
+            class="text-sm/6 font-semibold text-white"
+            >Compañias</a
+          >
+          <a
+            href="../dist/study-cases.html"
+            class="text-sm/6 font-semibold text-white"
+            >Casos de estudio</a
+          >
+          <a
+            href="../dist/about-me.html"
+            class="text-sm/6 font-semibold text-white"
+            >Sobre mi</a
+          >
+          <a
+            href="../dist/contact.html"
+            class="text-sm/6 font-semibold text-white"
+            >Contacto</a
+          >
+        </div>
+        <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm/6 font-semibold text-white"
+            >English <span aria-hidden="true">&rarr;</span></a
+          >
+        </div> -->
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img
+                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                    alt=""
+                    class="h-8 w-auto"
+                  />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../dist/index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Home</a
+                    >
+                    <a
+                      href="../dist/companies.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Compañias</a
+                    >
+                    <a
+                      href="../dist/study-cases.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Casos de estudio</a
+                    >
+                    <a
+                      href="../dist/about-me.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Sobre mi</a
+                    >
+                    <a
+                      href="../dist/contact.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Contacto</a
+                    >
+                  </div>
+                  <!-- <div class="py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >English</a
+                    >
+                  </div> -->
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <!-- Contact section -->
+    <div
+      class="flex flex-col lg:flex-row justify-center gap-16 mt-8 px-6 py- md:pt-28 md:pb-22 items-center lg:max-w-7xl"
+    >
+      <!-- Text -->
+      <div
+        class="text-base/7 flex flex-col items-start gap-2 shrink w-full max-w-2xl"
+      >
+        <h2 class="text-3xl font-semibold text-white mb-4">Sobre mi</h2>
+        <h3 class="text-xl font-semibold text-indigo-500 mb-2">Creatividad y estrategia trabajando juntos</h3>
+        <p class="mt-6 text-lg/7 text-gray-300 pb-2">
+          Soy un diseñadora que ha tenido la oportunidad de crear y mejorar
+          productos para una audiencia global colaborando con una amplia
+          variedad de perfiles en la creación de sitios web adaptativos y
+          aplicaciones móviles. 
+        </p>
+          <p class="mt-6 text-lg/7 text-gray-300 pb-2">
+            Mi enfoque se centra en la comunicación efectiva y la colaboración
+            interdisciplinaria, asegurando que los objetivos del negocio y las
+            necesidades de los usuarios estén alineados para lograr resultados
+            exitosos.
+          </p>
+          <p class="mt-6 text-lg/7 text-gray-300 pb-2">
+           Cuento con una amplia experiencia en la
+          coordinación con equipos de desarrollo, marketing y stakeholders, donde he
+          demuestrado mi capacidad para alinear visiones y gestionar proyectos
+          complejos de forma eficiente. 
+          </p>
+          
+      </div>
+      <!-- Img -->
+       <img
+        src="../assets/Contact image.png"
+        alt="Portrait image of Constanza Jaime"
+        class="w-full max-w-md rounded-lg shadow-lg lg:max-w-xl"
+      />
+      
+    </div>
+<div
+        class="text-base/7 flex flex-col items-center gap-2 shrink m-12 w-full max-w-2xl"
+      ><span
+          class="bg-indigo-500 h-0.5 w-96 md:w-full rounded-xl"
+        ></span>
+    </div>
+    <!-- Adaptabilidad a la etapa de tu proyecto section-->
+    <div class="bg-gray-900 px-6 pt-12 py-24 sm:pt-16 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:text-center">
+          <h2
+            class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance"
+          >
+            Adaptabilidad a la etapa de tu proyecto
+          </h2>
+          <p class="mt-6 text-lg/8 text-gray-300">
+            No importa si tu proyecto comienza desde cero o ya tienes tu
+            plataforma en producción, mi trabajao se adapta a tus objetivos y
+            las métricas de éxito sin importar la etapa en la que te encuentres.
+          </p>
+          <div class="mt-10 items-center gap-x-6">
+          <a
+            href="../dist/contact.html"
+            class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >Contáctame</a
+          >
+        </div>
+        </div>
+        <div class="w-full mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl
+            class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+          >
+            <div class="relative pl-16">
+              <dt class="text-base/7 font-semibold text-white">
+                <div
+                  class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-500"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6 text-white"
+                  >
+                    <path
+                      d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                Han diseñado para tu proyecto que no se puede llevar a cabo?
+              </dt>
+              <dd class="mt-2 text-base/7 text-gray-400">
+                Mis diseños son funcionales, basados en la comunicación
+                constante con los equipos involucrados. Agilizando aprobación,
+                evitando obstáculos y entregando valor de manera más rápida.
+              </dd>
+            </div>
+            <div class="relative pl-16">
+              <dt class="text-base/7 font-semibold text-white">
+                <div
+                  class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-500"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6 text-white"
+                  >
+                    <path
+                      d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                Ya tienes tu plataforma, pero no sabes que esta fallando?
+              </dt>
+              <dd class="mt-2 text-base/7 text-gray-400">
+                Podemos hacer evaluaciones tras establecer tus metas y métricas
+                de éxito, creando propuestas de mejora con impacto en tu negocio
+                y tus usuarios de forma escalable.
+              </dd>
+            </div>
+            <div class="relative pl-16">
+              <dt class="text-base/7 font-semibold text-white">
+                <div
+                  class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-500"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6 text-white"
+                  >
+                    <path
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                Primera vez trabajando con profesional de diseño o en el área de
+                tecnología?
+              </dt>
+              <dd class="mt-2 text-base/7 text-gray-400">
+                Tengo experiencia en el proceso de transformación digital de
+                clientes para guiar las etapas de creación de un producto o
+                desarrollo de un proyecto.
+              </dd>
+            </div>
+            <div class="relative pl-16">
+              <dt class="text-base/7 font-semibold text-white">
+                <div
+                  class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-500"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6 text-white"
+                  >
+                    <path
+                      d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                Quieres escalar tu proyecto o rediseñar tu web/ app?
+              </dt>
+              <dd class="mt-2 text-base/7 text-gray-400">
+                Podemos definir los pasos para poder mantener tu plataforma
+                funcionando y que siga generando ganancias mientras vamos
+                implementando mejoras de forma paulatina.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

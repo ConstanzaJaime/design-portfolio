@@ -1,0 +1,622 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Constanza Jaime - Soy una profesional en el área de diseño web enfocada en crear experiencias intuitivas, centradas en el usuario y basadas en datos. He tenido la oportunidad de diseñar para una audiencia global, donde destaco por mi capacidad de comunicación y colaboración. 
+      Creo firmemente que compartir objetivos claros dentro del equipo es la base para crear productos escalables y rentables para el negocio que atraigan a los usuarios.
+      Trabajo bajo el principio de mejora continua y estoy acostumbrado a aplicar diferentes metodologías para resolver problemas complejos en periodos cortos mejorando la experiencia de los usuarios, junto con los resultados de los clientes y equipos con los que trabajo."
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <title>Designer</title>
+  </head>
+  <body class="bg-gray-900 flex flex-col items-center">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        aria-label="Global"
+        class="flex items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="../dist/index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img src="../assets/logo.png" alt="logo" class="h-8 w-auto" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="../dist/index.html"
+            class="text-sm/6 font-semibold text-white"
+            >Home</a
+          >
+           <a
+            href="../dist/companies.html"
+            class="text-sm/6 font-semibold text-white"
+            >Compañias</a
+          >
+          <a
+            href="../dist/study-cases.html"
+            class="text-sm/6 font-semibold text-white"
+            >Casos de estudio</a
+          >
+          <a
+            href="../dist/about-me.html"
+            class="text-sm/6 font-semibold text-white"
+            >Sobre mi</a
+          >
+          <a
+            href="../dist/contact.html"
+            class="text-sm/6 font-semibold text-white"
+            >Contacto</a
+          >
+        </div>
+        <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm/6 font-semibold text-white"
+            >English <span aria-hidden="true">&rarr;</span></a
+          >
+        </div> -->
+      </nav>
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+            >
+              <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img
+                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                    alt=""
+                    class="h-8 w-auto"
+                  />
+                </a>
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="size-6"
+                  >
+                    <path
+                      d="M6 18 18 6M6 6l12 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                  <div class="space-y-2 py-6">
+                    <a
+                      href="../dist/index.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Home</a
+                    >
+                    <a
+                      href="../dist/companies.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Compañias</a
+                    >
+                    <a
+                      href="../dist/study-cases.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Casos de estudio</a
+                    >
+                    <a
+                      href="../dist/about-me.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Sobre mi</a
+                    >
+                    <a
+                      href="../dist/contact.html"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >Contacto</a
+                    >
+                  </div>
+                  <!-- <div class="py-6">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                      >English</a
+                    >
+                  </div> -->
+                </div>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+    <div class="w-auto max-w-7xl">
+      <img src="../assets/landing-img-otras-miradas.png" alt="">
+    </div>
+    <div class="px-6 py-8 lg:px-8">
+      <!--RESPONSIVE CHECKED- Otras miradas study case page -->
+      <div class="flex flex-col w-full max-w-7xl text-xl text-gray-300">
+      <div class="my-6 w-auto max-w-7xl">
+        <h2
+          class="text-3xl font-semibold tracking-tight text-pretty text-white lg:text-5xl"
+        >
+          Sitio web para niños con necesidades educativas especiales
+        </h2>
+      </div>
+      <div class="w-auto max-w-2xl my-8">
+        <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+          Resumen del proyecto
+        </h3>
+        <div class="my-6">
+          <p>
+            La Fundación Otras Miradas es una organización sin ánimo de lucro
+            creada en agosto de 2018 por un grupo de familias con niños con
+            necesidades educativas especiales. La fundación integra a niños con
+            seis diagnósticos:
+          </p>
+          <br />
+          <ul class="ml-6">
+            <li class="list-disc">Síndrome de Down.</li>
+            <br />
+            <li class="list-disc">Síndrome de Pierre Robin.</li>
+            <br />
+            <li class="list-disc">Trastorno del espectro autista.</li>
+            <br />
+            <li class="list-disc">Déficit de atención.</li>
+            <br />
+            <li class="list-disc">Hernia diafragmática congénita.</li>
+            <br />
+            <li class="list-disc">Epilepsia.</li>
+            <br />
+            <li class="list-disc">Otros diagnósticos</li>
+          </ul>
+        </div>
+      </div>
+      <span class="bg-indigo-500 h-0.5 w-full my-8 rounded-xl"></span>
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 w-fit lg:max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            El desafío
+          </h3>
+          <div class="my-6">
+            <p>
+              Creación de una propuesta web destinada a apoyar a las familias de
+              niños con necesidades educativas especiales.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="flex flex-col items-start gap-4 shrink w-full lg:max-w-2xl">
+          <div class="my-8">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Estado del problema
+            </h3>
+            <h4 class="text-xl lg:text-2xl font-semibold text-white mt-6">
+              Evaluación heurística
+            </h4>
+            <div class="my-6">
+              <p>
+                Tenían un sitio web gratuito, creado por ellos mismos a través
+                de Wix. Tras una evaluación heurística del sitio, se comprobó
+                que la mayoría de los elementos se encontraban en el nivel 4,
+                por lo que se tomó la decisión de replantear completamente el
+                diseño del sitio y realizar una selección del contenido en
+                función de las necesidades de los usuarios.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="../assets/Otras-miradas-Ev-Heuristica.png"
+            alt="project image"
+            class="grow w-full lg:max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="flex flex-col items-start gap-4 shrink w-full lg:max-w-2xl">
+          <div class="my-8">
+            <h4 class="text-xl lg:text-2xl font-semibold text-white mt-6">
+              Entrevistas a los usuarios
+            </h4>
+            <div class="my-6">
+              <p>
+                Observamos un bajo nivel de conocimientos tecnológicos por parte
+                de los usuarios. Y lo más destacado fue la cantidad de tiempo
+                que tienen que dedicar al cuidado de sus hijos, especialmente en
+                terapias semanales u otra atención médica, dependiendo de su
+                diagnóstico.
+              </p>
+              <br />
+              <p>
+                Algunos padres han visitado hasta 14 terapeutas en busca de uno
+                que pueda ayudar a su hijo.
+              </p>
+              <br />
+              <p>
+                Observamos un bajo nivel de conocimientos tecnológicos por parte
+                de los usuarios. Y lo más destacado fue la cantidad de tiempo
+                que tienen que dedicar al cuidado de sus hijos, especialmente en
+                terapias semanales u otras atenciones médicas, dependiendo de su
+                diagnóstico.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="../assets/testing.png"
+            alt="project image"
+            class="grow w-full lg:max-w-2xl rounded-xl"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="flex flex-col items-start gap-4 shrink w-full">
+          <div class="my-8">
+            <div class="my-6">
+              <p>
+                Tras la investigación, nos dimos cuenta de que las familias
+                necesitaban ayuda con el cuidado de los niños y reducir el
+                tiempo que les llevaba encontrarla. Así que nos preguntamos:
+                «¿Cómo podríamos ahorrar tiempo a los usuarios a la hora de
+                encontrar ayuda para sus hijos?».
+              </p>
+              <br />
+              <p>
+                Hicimos una lluvia de ideas y decidimos crear una nueva página
+                web en la que pudieran encontrar fácilmente esta información, a
+                través de las recomendaciones de los propios miembros de la
+                fundación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-auto my-8">
+        <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+          Temas de interés para los usuarios
+        </h3>
+        <div class="my-6">
+          <p>
+            Realizamos una encuesta con la información del sitio web para
+            conocer la relevancia de cada tema para los usuarios:
+          </p>
+          <br />
+          <ul class="ml-6">
+            <li class="list-disc">
+              68 % Profesionales de la salud o la educación con experiencia en
+              el tema.
+            </li>
+            <br />
+            <li class="list-disc">
+              55 % Información sobre el síndrome, trastorno o afección del
+              familiar.
+            </li>
+            <br />
+            <li class="list-disc">
+              55 % Testimonios de personas que se encuentran o se han encontrado
+              en una situación similar.
+            </li>
+            <br />
+            <li class="list-disc">
+              55 % Talleres y beneficios de la fundación.
+            </li>
+            <br />
+            <li class="list-disc">30 % Contacto para solicitar ayuda.</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Mapa del sitio
+          </h3>
+          <div class="my-6">
+            <p>
+              Antes de la encuesta, creamos el antiguo mapa del sitio para
+              visualizar fácilmente la información. Este se modificó según los
+              resultados, organizando el contenido más relevante en un nuevo
+              mapa del sitio.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row items-center gap-4 shrink w-full max-w-7xl"
+        >
+          <div>
+            <img
+              src="../assets/OM-UX-Tools-SiteMap 01 1.png"
+              alt="project image"
+              class="grow w-full max-w-7xl rounded-xl"
+            />
+          </div>
+          <div>
+            <img
+              src="../assets/OM-UX-Tools-SiteMap 02 1.png"
+              alt="project image"
+              class="grow w-full max-w-7xl rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Wireframes
+          </h3>
+          <div class="my-6">
+            <p>
+              Creamos las vistas de pantalla con el contenido que buscaban los
+              usuarios.
+            </p>
+            <br />
+            <p>
+              Teniendo en cuenta el nivel de conocimientos tecnológicos de los
+              usuarios, diseñamos una interfaz sencilla que les permite navegar
+              por el sitio web desde cualquiera de sus pantallas.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center gap-4 shrink w-full max-w-7xl">
+          <div>
+            <img
+              src="../assets/OM-UX-Tools-Wireframe 1.png"
+              alt="project image"
+              class="grow w-full max-w-7xl rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Etapa de pruebas
+          </h3>
+          <div class="my-6">
+            <p>
+              En las pruebas participaron madres, abuelas y terapeutas de la
+              fundación.
+            </p>
+            <br />
+            <p>
+              Obtuvimos una aprobación general y tomamos nota de los comentarios
+              y opiniones para facilitar aún más la forma en que se mostraba el
+              contenido, añadiendo otra información para complementar los temas
+              de interés.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 w-fit max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            El resultado
+          </h3>
+          <div class="my-6">
+            <p>
+              Finalmente, se creó una página móvil en la que se puede encontrar
+              de forma sencilla la información más relevante para los usuarios.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Mockups -->
+      <div
+        class="flex flex-col justify-center items-center gap-10 my-4 max-w-7xl"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+        >
+          <div class="my-8 w-full max-w-2xl">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Buscar profesionales
+            </h3>
+            <div class="my-6">
+              <p>
+                La sección más relevante era la pantalla con los profesionales
+                sanitarios recomendados por los propios miembros de la
+                fundación.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center w-full max-w-2xl lg:w-xs"
+          >
+            <div>
+              <img
+                src="../assets/Otras-miradas-mockup01.png"
+                alt="project image"
+                class="w-full max-h-80 rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+        >
+          <div class="my-8 w-full max-w-2xl">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Talleres y terapias
+            </h3>
+            <div class="my-6">
+              <p>
+                Otro punto importante para los miembros era poder informarse
+                sobre los talleres y terapias que se llevarán a cabo en la
+                fundación, para lo cual se incorporó un calendario con estos.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center w-full max-w-2xl lg:w-xs"
+          >
+            <div>
+              <img
+                src="../assets/Otras-miradas-mockup02.png"
+                alt="project image"
+                class="w-full max-h-80 rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+        >
+          <div class="my-8 w-full max-w-2xl">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Información diagnóstica
+            </h3>
+            <div class="my-6">
+              <p>
+                Según los usuarios, esto fue muy impactante, no solo por poder
+                ayudar a sus hijos, sino también por poder comprender y apoyar a
+                las demás familias.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center w-full max-w-2xl lg:w-xs"
+          >
+            <div>
+              <img
+                src="../assets/Otras-miradas-mockup03.png"
+                alt="project image"
+                class="w-full max-h-80 rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+        >
+          <div class="my-8 w-full max-w-2xl">
+            <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+              Información sobre la fundación
+            </h3>
+            <div class="my-6">
+              <p>
+                Esto se ha añadido para aquellas personas que conocen la
+                fundación por primera vez y desean obtener más información sobre
+                ella.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center w-full max-w-2xl lg:w-xs"
+          >
+            <div>
+              <img
+                src="../assets/Otras-miradas-mockup04.png"
+                alt="project image"
+                class="w-full max-h-80 rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="bg-indigo-500 h-0.5 w-full my-8 rounded-xl"></span>
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-10 my-4 lg:max-w-7xl"
+      >
+        <div class="my-8">
+          <h3 class="text-2xl lg:text-3xl font-semibold text-white">
+            Aprendizajes
+          </h3>
+          <div class="my-6">
+            <p>
+              Este fue un proyecto en el que se pudo sentir cómo la tecnología
+              puede ponerse al servicio de las personas, facilitando un poco las
+              complicaciones de su día a día.
+            </p>
+            <br />
+            <p>
+              Otros puntos relevantes fueron la necesidad de mantener la
+              simplicidad de las páginas y evitar excesos para facilitar la
+              navegación de los usuarios menos expertos.
+            </p>
+          </div>
+        </div>
+        <!-- <div
+          class="flex flex-col items-center gap-4 shrink w-full lg:max-w-2xl"
+        >
+          <div>
+            <img
+              src="../assets/placeholder-image.png"
+              alt="project image"
+              class="grow w-full lg:max-w-2xl rounded-xl"
+            />
+          </div>
+        </div> -->
+      </div>
+    </div>
+    </div>
+    
+  </body>
+</html>
